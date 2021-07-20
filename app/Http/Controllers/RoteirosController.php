@@ -52,9 +52,11 @@ class RoteirosController extends Controller
      * @param  \App\roteiros  $roteiros
      * @return \Illuminate\Http\Response
      */
-    public function show(roteiros $roteiros)
+    public function show($roteiros)
     {
-        return view('roteiros.show');
+        
+        $roteiros = roteiros::where('id',$roteiros)->get();
+        return view('roteiros.show', compact('roteiros'));
     }
 
     /**
@@ -65,6 +67,7 @@ class RoteirosController extends Controller
      */
     public function edit(roteiros $roteiros)
     {
+        
         return view('roteiros.edit');
     }
 

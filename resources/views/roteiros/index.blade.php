@@ -10,7 +10,7 @@
 
                 <div class="list-group">
                     @foreach ($roteiros as $item)
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="{{ route('roteiros.show', ['prisw'=>$item->id])}}" class="list-group-item list-group-item-action">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{$item->local}}</h5>
                         <small>3 days ago</small>
