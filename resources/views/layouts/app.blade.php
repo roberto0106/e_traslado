@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/AdminLTE.min.css') }}">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 <body>
