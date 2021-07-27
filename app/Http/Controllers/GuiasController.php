@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\guias;
+use App\roteiros;
 use Illuminate\Http\Request;
 
 class GuiasController extends Controller
@@ -25,7 +26,14 @@ class GuiasController extends Controller
      */
     public function create()
     {
-        return view('guias.create');
+        $rot = roteiros::all();
+
+        foreach ($rot as $key => $value) {
+            $roteiros[$value->id] = $value->local;
+        }
+
+
+        return view('guias.create', compact('roteiros'));
     }
 
     /**
@@ -36,7 +44,13 @@ class GuiasController extends Controller
      */
     public function store(Request $request)
     {
-
+        $guia = new guias;
+        $guia->nome = $request->nome;
+        $guia->sobrenome=$request->sobrenome;
+        $guia->especialidades = $request->especialidades;
+        $guia->telefone = $request->telefone;
+        $guia->save();
+        dd($guia);
     }
 
     /**

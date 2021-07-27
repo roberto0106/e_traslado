@@ -8,13 +8,35 @@
                 <div class="card-header">guias</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                  {!!  Form::open(['route' => 'guias.store']) !!}
 
-                    You are logged in!
+                  <div class="form-group">
+                    {!! Form::label('nome', "nome") !!}
+                    {!! Form::text('nome', '', ['class'=>'form-control']) !!}
+                  </div>
+                  
+                  <div class="form-group">
+                    {!! Form::label('sobrenome', "sobrenome") !!}
+                    {!! Form::text('sobrenome', '', ['class'=>'form-control']) !!}
+                  </div>
+                  
+                  <div class="form-group">
+                    {!! Form::label('especialidades', "especialidades") !!}
+                    {!! Form::text('especialidades', '', ['class'=>'form-control']) !!}
+                  </div>
+
+                  <div class="form-group">
+                  {!! Form::label('telefone', "telefone") !!}
+                  {!! Form::number('telefone', '', ['class'=>'form-control']) !!}
+                 </div>
+
+                 <div class="form-group">
+                  {!! Form::label('roteiros', "roteiros") !!}
+                  {!! Form::select('roteiros', $roteiros, 'selecione', ['class'=>'form-control','multiple']) !!}                 
+                </div>
+
+                  {!! Form::submit('enviar', ['class'=>'form-control']) !!}
+                  {!! Form::close() !!}
                 </div>
             </div>
         </div>

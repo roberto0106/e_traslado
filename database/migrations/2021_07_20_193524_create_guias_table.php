@@ -15,6 +15,10 @@ class CreateGuiasTable extends Migration
     {
         Schema::create('guias', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nome');
+            $table->string('sobrenome');
+            $table->string('especialidades');
+            $table->string('telefone');
             $table->timestamps();
         });
     }
