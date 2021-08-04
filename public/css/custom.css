@@ -6,3 +6,18 @@ width: 150px;
     width: 200px;
     padding: 10px;
 }
+
+.jumbotron{
+    background-image: url("../img/rio_amazonas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: aliceblue;
+    padding-top: 190px;
+    text-align: center;
+}
+
+.search{
+    width: 200px;
+}

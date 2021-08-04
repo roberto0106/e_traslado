@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+            <div class="col-md-8">
                 <div class="list-group">
+                  @if ($search)
+                    <h5>Resultado da pesquisa por eventos em {{$search}}</h5>
+                  @else
+                  <h5>Todos Roteiros</h5>
+                  @endif
       
                     @foreach ($roteiros as $item)
                     <a href="{{ route('roteiros.show', ['prisw'=>$item->id])}}" class="list-group-item list-group-item-action">
