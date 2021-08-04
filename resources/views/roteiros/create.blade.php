@@ -53,8 +53,8 @@
                     </div>
   
                     <div class="form-group">
-                      {!! Form::label('hora_inicio', "horário da partida") !!}
-                      {!! Form::time('hora_inicio', '', ['class'=>'form-control']) !!}
+                      {!! Form::label('hora_partida', "horário da partida") !!}
+                      {!! Form::time('hora_partida', '', ['class'=>'form-control']) !!}
                     </div>
                    </div>
                    <div class="col-6">

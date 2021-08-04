@@ -15,16 +15,26 @@
                 <p class="card-text"><a href="{{ route('guias.index')}}" class="btn btn-primary btn-block">Ver guias</a></p>
             </div>
             </div>
+           
+           {!! Form::open(['route'=>'roteiros.index','method'=>'get']) !!}
+           
             <div class="card">
               <img class="rounded mx-auto d-block icon_home" src="{{ asset('img/roteiros_icon.png')}}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Roteiros</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <div class="row">
+                  <div class="col-12">
+                    {!! Form::date('data_evento','' , ['class'=>'form-control']) !!}
+                  </div>
+                </div>
               </div>
               <div class="card-footer">
-                <p class="card-text"><a href="{{ route('roteiros.index')}}" class="btn btn-primary btn-block">Ver os roteiros</a></p>
+                <p class="card-text"><button class="btn btn-primary btn-block">Ver os roteiros</button></p>
             </div>
             </div>
+            {!! Form::close() !!}
+
             <div class="card">
               <img class="rounded mx-auto d-block icon_home" src="{{ asset('img/favoritos.png')}}" alt="Card image cap">
               <div class="card-body">

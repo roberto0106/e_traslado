@@ -20,6 +20,10 @@ class CreateRoteirosTable extends Migration
             $table->string('cidade');
             $table->string('local');
             $table->string('descricao');
+            $table->date('data_partida');
+            $table->time('hora_partida');
+            $table->date('data_retorno');
+            $table->time('hora_retorno');
             $table->timestamps();
         });
     }

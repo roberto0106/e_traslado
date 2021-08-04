@@ -4,11 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            
-            
-               
-
                 <div class="list-group">
+      
                     @foreach ($roteiros as $item)
                     <a href="{{ route('roteiros.show', ['prisw'=>$item->id])}}" class="list-group-item list-group-item-action">
                       <div class="d-flex w-100 justify-content-between">
@@ -19,7 +16,10 @@
                         <img src="{{$item->foto}}" class="mr-3 img_roteiros" alt="...">
                         <div class="media-body">
                           <h5 class="mt-0">{{$item->estado}}</h5>
-                            {{$item->descricao}}
+                            {{$item->descricao}} <br>
+                            <div class="datas">
+                              data de partida {{$item->data_partida}}
+                            </div>
                         </div>
                       </div>
                     </a>

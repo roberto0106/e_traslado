@@ -14,8 +14,15 @@ class RoteirosController extends Controller
      */
     public function index()
     {
-        $roteiros = roteiros::all();
-        return view('roteiros.index', compact('roteiros'));
+        
+        $search = request('data_evento');
+
+        if($search){
+            $roteiros = roteiros::where('data_partida','=',$search)->get();
+        }else{
+            $roteiros = roteiros::all();
+        }
+         return view('roteiros.index', compact('roteiros','search'));
     }
 
     /**
@@ -42,6 +49,10 @@ class RoteirosController extends Controller
        $novo_roteiro->cidade = $request->cidade;
        $novo_roteiro->local = $request->local;
        $novo_roteiro->descricao = $request->descricao;
+       $novo_roteiro->data_partida = $request->data_partida;
+       $novo_roteiro->hora_partida = $request->hora_partida;
+       $novo_roteiro->data_retorno = $request->data_retorno;
+       $novo_roteiro->hora_retorno = $request->hora_retorno;
        $novo_roteiro->save();
 
     }
