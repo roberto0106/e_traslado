@@ -1,6 +1,10 @@
-@media only screen and (min-width : 400px) {
-    .titulo_banner {
-       font-size: 15px;
+@media only screen and (max-width : 400px) {
+    .jumbotron h1 {
+       font-size: 20px;
+     }
+
+     .jumbotron{
+        height: 300px !important;
      }
 }
 
