@@ -1,3 +1,11 @@
+@media only screen and (min-width : 400px) {
+    .titulo_banner {
+       font-size: 15px;
+     }
+}
+
+
+
 .img_roteiros{
 width: 150px;
 }
@@ -21,3 +29,4 @@ width: 150px;
 .search{
     width: 200px;
 }
+

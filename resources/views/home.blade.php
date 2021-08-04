@@ -4,7 +4,7 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Encontre seu próximo destino</h1>
+    <h1 class="titulo_banner">Encontre seu próximo destino</h1>
     {!! Form::open(['route'=>'roteiros.index','method'=>'get']) !!}
 
     <div class="container">
