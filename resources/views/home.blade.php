@@ -10,7 +10,7 @@
       <div class="bloco_search">
         <div class="form-check form-check-inline">
           <div class="container text-center">
-            <p>Data: <input type="text" id="calendario" name="data" /></p>
+            <p>Data: <input type="text" id="calendario" name="data" autocomplete="off"/></p>
           </div>  
           <button class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
         </div>
