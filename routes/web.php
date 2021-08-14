@@ -21,9 +21,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('guias', GuiasController::class) ;
     Route::resource('roteiros', RoteirosController::class);
-    Route::get('get_roteiros','RoteirosController@get_roteiros');
     Route::get('data_roteiros','RoteirosController@search_data_roteiros')->name('data_roteiro');
+
 });
+
+Route::get('get_roteiros','RoteirosController@get_roteiros');
+
 
 /*api*/ 
 
