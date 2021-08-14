@@ -78,7 +78,7 @@
  
   let array; 
     
-  axios.get('http://etraslado.herokuapp.com/get_roteiros/')
+  axios.get('get_roteiros/')
   .then(function (response) {
     array = response.data
     $('#calendario').datepicker({
