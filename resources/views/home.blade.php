@@ -5,27 +5,30 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="titulo_banner">Encontre seu próximo destino</h1>
-    {!! Form::open(['route'=>'roteiros.index','method'=>'get']) !!}
-
-    <div class="container">
-      <div class="row">
-        <div class="col-10">
-          {!! Form::date('data_evento','' , ['class'=>'form-control']) !!}
-        </div>
-        <div class="col-2">
+    {!! Form::open(['route'=>'data_roteiro','method'=>'get']) !!} 
+    <div class="row justify-content-center">
+      <div class="bloco_search">
+        <div class="form-check form-check-inline">
+          <div class="container text-center">
+            <p>Data: <input type="text" id="calendario" name="data" /></p>
+          </div>  
           <button class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
         </div>
       </div>
     </div>
-  
     {!! Form::close() !!}
+
+ 
+   </div>
+
+  
   </div>
 </div>
 
 
 <div class="container">
     <div class="row justify-content-center">
-        
+      
         <div class="card-deck">
             <div class="card">
               <img class="rounded mx-auto d-block icon_home" src="{{ asset('img/guias.png')}}" alt="Card image cap">
@@ -63,7 +66,36 @@
             </div>
           </div>
 
-
     </div>
 </div>
+
+@endsection
+
+@section('scripts')
+
+<script>
+  $(function() {
+ 
+  let array; 
+    
+  axios.get('get_roteiros/')
+  .then(function (response) {
+    array = response.data
+    $('#calendario').datepicker({
+          beforeShowDay: function(date){
+              var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+              return [ array.indexOf(string) > -1 ]
+          }
+      });
+  });
+
+    
+
+      
+
+
+  });
+
+  </script>
+
 @endsection

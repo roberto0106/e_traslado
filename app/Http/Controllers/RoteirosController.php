@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\roteiros;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class RoteirosController extends Controller
 {
@@ -103,5 +104,22 @@ class RoteirosController extends Controller
     public function destroy(roteiros $roteiros)
     {
         //
+    }
+
+    public function get_roteiros()
+    {
+        $datas=[];
+        $roteiros = roteiros::all();
+        foreach ($roteiros as $key => $value) {
+            $datas[]=$value->data_partida;
+        }
+        
+        return $datas;
+    }
+
+    public function search_data_roteiros(Request $request){
+        $search = Carbon::parse($request->data)->toDateString();
+        $roteiros = roteiros::where('data_partida',$search)->get(); 
+        return view('roteiros.index', compact('roteiros','search'));
     }
 }

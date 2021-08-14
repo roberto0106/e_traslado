@@ -26,6 +26,7 @@ width: 150px;
     background-position: center;
     height: 400px;
     color: aliceblue;
+    text-shadow: black 0.1em 0.1em 0.2em;
     padding-top: 190px;
     text-align: center;
 }
@@ -34,3 +35,6 @@ width: 150px;
     width: 200px;
 }
 
+.bloco_search{
+    margin: 0 auto;
+}
