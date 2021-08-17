@@ -10,7 +10,7 @@
       <div class="bloco_search">
         <div class="form-check form-check-inline">
           <div class="container text-center">
-            <p>Data: <input type="text" id="calendario" name="data" autocomplete="off"/></p>
+            <p>Data: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/></p>
           </div>  
           <button class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
         </div>
@@ -26,48 +26,15 @@
 </div>
 
 
-<div class="container">
-    <div class="row justify-content-center">
-      
-        <div class="card-deck">
-            <div class="card">
-              <img class="rounded mx-auto d-block icon_home" src="{{ asset('img/guias.png')}}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Guias</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <p class="card-text"><a href="{{ route('guias.index')}}" class="btn btn-primary btn-block">Ver guias</a></p>
-            </div>
-            </div>
+   <div class="row justify-content-center">
+      <div class="col-4">
+        <iframe src="https://www.meteoblue.com/pt/tempo/widget/three?geoloc=detect&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 586px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/pt/tempo/semana/index?utm_source=weather_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" target="_blank">meteoblue</a></div>
 
-            <div class="card">
-              <img class="rounded mx-auto d-block icon_home" src="{{ asset('img/roteiros_icon.png')}}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Roteiros</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                
-              </div>
-              <div class="card-footer">
-                
-            </div>
-            </div>
-
-
-            <div class="card">
-              <img class="rounded mx-auto d-block icon_home" src="{{ asset('img/favoritos.png')}}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Meus Favoritos</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              </div>
-              <div class="card-footer">
-                <p class="card-text"><a href="{{ route('guias.index')}}" class="btn btn-primary btn-block">Ver meus favoritos</a></p>
-            </div>
-            </div>
-          </div>
-
+      </div>
+    <div class="col-8">
+     
     </div>
-</div>
+
 
 @endsection
 
