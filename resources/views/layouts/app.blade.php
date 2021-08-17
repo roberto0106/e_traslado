@@ -15,14 +15,15 @@
     <title>e_traslados</title>
 
     <!-- Scripts -->
-    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+    <script src="{{ asset('js/app.js') }}"></script>
+
 
     <!--axios-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -50,11 +51,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                       
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                                                
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -82,8 +84,13 @@
                                         @csrf
                                     </form>
                                 </div>
+                                
                             </li>
+                            
                         @endguest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('config')}}"><i class="fas fa-cog"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -95,6 +102,6 @@
     </div>
 </body>
 </html>
-
 @yield('scripts')
+ 
 
