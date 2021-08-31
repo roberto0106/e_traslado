@@ -8,7 +8,7 @@
                 <div class="card-header">roteiros</div>
 
                 <div class="card-body">
-                  {!!  Form::open(['route' => 'roteiros.store']) !!}
+                  {!!  Form::open(['route' => 'roteiros.store','enctype'=>'multipart/form-data']) !!}
 
                   <div class="row">
                     <div class="col-6" style="border-right: 1px solid #CED4DA">
@@ -35,7 +35,7 @@
                     <div class="col-6">
                     <div class="form-group">
                       {!! Form::label('fotos', "fotos") !!}
-                      {!! Form::file('fotos',['multiple']) !!}
+                      <input type="file" name="fotos[]" id="fotos" multiple>
                     </div>
                     </div>
                   </div>

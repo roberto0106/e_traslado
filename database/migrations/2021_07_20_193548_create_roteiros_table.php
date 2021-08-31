@@ -15,7 +15,6 @@ class CreateRoteirosTable extends Migration
     {
         Schema::create('roteiros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('foto');
             $table->string('estado');
             $table->string('cidade');
             $table->string('local');

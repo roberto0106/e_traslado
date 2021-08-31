@@ -44,8 +44,13 @@ class RoteirosController extends Controller
      */
     public function store(Request $request)
     {
+       if($request->hasFile('fotos')){
+           $images = $this->imageUpload($request,'link_photo');
+       }
+
+       //dd($images);
+       
        $novo_roteiro = new roteiros;
-       $novo_roteiro->foto = 'https://thumbs.dreamstime.com/b/lake-mountains-5703492.jpg';
        $novo_roteiro->estado = $request->estado;
        $novo_roteiro->cidade = $request->cidade;
        $novo_roteiro->local = $request->local;
@@ -55,6 +60,10 @@ class RoteirosController extends Controller
        $novo_roteiro->data_retorno = $request->data_retorno;
        $novo_roteiro->hora_retorno = $request->hora_retorno;
        $novo_roteiro->save();
+
+       $novo_roteiro->fotos()->createMany($images);
+
+       return redirect()->route('roteiros.index');
 
     }
 
@@ -122,4 +131,18 @@ class RoteirosController extends Controller
         $roteiros = roteiros::where('data_partida',$search)->get(); 
         return view('roteiros.index', compact('roteiros','search'));
     }
+
+    private function imageUpload(Request $request, $imageColumn){
+        
+        $images = $request->file('fotos');
+        $uploadedImages = [];
+
+        foreach ($images as $image) {
+            $uploadedImages[]=[$imageColumn =>$image->store('roteiros','public')];
+        }
+        return $uploadedImages;
+    }
+
+
+
 }
