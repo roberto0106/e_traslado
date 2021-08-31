@@ -5,19 +5,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             
-            <h1>{{$roteiros[0]['local']}}</h1>
+            <h1>{{$roteiros->local}}</h1>
             
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://thumbs.dreamstime.com/b/thai-sakura-17645086.jpg" class="d-block w-100" alt="...">
+                 
+                  @foreach ($roteiros->fotos as $item)
+                  <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                    <img src="{{ asset('storage/'.$item->link_photo)}}" class="d-block w-100" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="https://thumbs.dreamstime.com/b/paddy-16185050.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://thumbs.dreamstime.com/b/sunset-10088688.jpg" class="d-block w-100" alt="...">
-                  </div>
+                  @endforeach
+
+
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -32,11 +31,11 @@
               <h1>Informações</h1>
              
                    <ul class="list-group">
-                    <li class="list-group-item">id: {{$roteiros[0]['id']}}</li>
-                    <li class="list-group-item">estado: {{$roteiros[0]['estado']}}</li>
-                    <li class="list-group-item">cidade: {{$roteiros[0]['cidade']}}</li>
-                    <li class="list-group-item">local: {{$roteiros[0]['local']}}</li>
-                    <li class="list-group-item">duração: {{$roteiros[0]['duracao']}}</li>
+                    <li class="list-group-item">id: {{$roteiros->id}}</li>
+                    <li class="list-group-item">estado: {{$roteiros->estado}}</li>
+                    <li class="list-group-item">cidade: {{$roteiros->cidade}}</li>
+                    <li class="list-group-item">local: {{$roteiros->local}}</li>
+                    <li class="list-group-item">duração: {{$roteiros->duracao}}</li>
                   </ul>
               <hr>
               

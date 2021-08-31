@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\roteiros;
+use App\photos;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -76,7 +77,7 @@ class RoteirosController extends Controller
     public function show($roteiros)
     {
         
-        $roteiros = roteiros::where('id',$roteiros)->get();
+        $roteiros = roteiros::find($roteiros);
         return view('roteiros.show', compact('roteiros'));
     }
 
@@ -138,7 +139,7 @@ class RoteirosController extends Controller
         $uploadedImages = [];
 
         foreach ($images as $image) {
-            $uploadedImages[]=[$imageColumn =>$image->store('roteiros','public')];
+            $uploadedImages[]=[$imageColumn =>$image->store('fotos','public')];
         }
         return $uploadedImages;
     }
