@@ -19,7 +19,7 @@
                         <small>3 days ago</small>
                       </div>
                       <div class="media">
-                        <img src="{{$item->foto}}" class="mr-3 img_roteiros" alt="...">
+                        <img src="{{ asset('storage/'.$item->fotos[0]->link_photo)}}" class="mr-3 img_roteiros" alt="...">
                         <div class="media-body">
                           <h5 class="mt-0">{{$item->estado}}</h5>
                             {{$item->descricao}} <br>

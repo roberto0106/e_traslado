@@ -12,12 +12,7 @@
 
                   <div class="form-group">
                     {!! Form::label('nome', "nome") !!}
-                    {!! Form::text('nome', '', ['class'=>'form-control']) !!}
-                  </div>
-                  
-                  <div class="form-group">
-                    {!! Form::label('sobrenome', "sobrenome") !!}
-                    {!! Form::text('sobrenome', '', ['class'=>'form-control']) !!}
+                    {!! Form::text('nome', $user->name, ['class'=>'form-control']) !!}
                   </div>
                   
                   <div class="form-group">
@@ -29,11 +24,6 @@
                   {!! Form::label('telefone', "telefone") !!}
                   {!! Form::number('telefone', '', ['class'=>'form-control']) !!}
                  </div>
-
-                 <div class="form-group">
-                  {!! Form::label('roteiros', "roteiros") !!}
-                  {!! Form::select('roteiros', $roteiros, 'selecione', ['class'=>'form-control','multiple']) !!}                 
-                </div>
 
                   {!! Form::submit('enviar', ['class'=>'form-control']) !!}
                   {!! Form::close() !!}

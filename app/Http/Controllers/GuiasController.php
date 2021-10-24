@@ -16,7 +16,8 @@ class GuiasController extends Controller
     public function index()
     {
      
-        return view('guias.index');
+        $guias = guias::all();
+        return view('guias.index',compact('guias'));
     }
 
     /**
@@ -26,14 +27,10 @@ class GuiasController extends Controller
      */
     public function create()
     {
+        $user = auth()->user();
         $rot = roteiros::all();
 
-        foreach ($rot as $key => $value) {
-            $roteiros[$value->id] = $value->local;
-        }
-
-
-        return view('guias.create', compact('roteiros'));
+        return view('guias.create', compact('user'));
     }
 
     /**

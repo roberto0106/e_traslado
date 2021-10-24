@@ -8,13 +8,11 @@
                 <div class="card-header">guias</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                
+                    @foreach ($guias as $item)
+                        {{$item}}
+                    @endforeach
 
-                    You are logged in!
                 </div>
             </div>
         </div>
