@@ -12,7 +12,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   
   
-  <title>e_traslados</title>
+  <title>adventurelife</title>
   
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}"></script>
@@ -85,9 +85,19 @@
   <div class="busca content text-center">
     <div class="form-check form-check-inline"> 
       
-      Check in: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
-      <p>Check out: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/></p>
-      <button class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
+        {!! Form::open(['route'=>'data_roteiro','method'=>'get']) !!} 
+    <div class="row justify-content-center">
+      <div class="bloco_search">
+        <div class="form-check form-check-inline">
+          <div class="container text-center">
+            <p>Data: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/></p>
+          </div>  
+          <button class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+    {!! Form::close() !!}
+
     </div>
   </div>
   
