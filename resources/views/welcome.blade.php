@@ -82,25 +82,43 @@
 <!-- Banner Image  -->
 <div class="banner-image w-100 vh-100 d-flex justify-content-center" >
   
-  <div class="busca content text-center">
-    <div class="form-check form-check-inline"> 
+  <div class="busca content">
+    
+    {!! Form::open(['route'=>'data_roteiro','method'=>'get' ]) !!}  
+    
+    <div class="d-flex justify-content-center" id="search_menu">
       
-        {!! Form::open(['route'=>'data_roteiro','method'=>'get']) !!} 
-    <div class="row justify-content-center">
-      <div class="bloco_search">
-        <div class="form-check form-check-inline">
-          <div class="container text-center">
-            <p>Data: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/></p>
-          </div>  
-          <button class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
-        </div>
+      <div class="col">
+        <label for="data" class="control-label-custom">Localidade:</label>
+        <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
       </div>
-    </div>
-    {!! Form::close() !!}
+      
+      <div class="col">
+        <label for="data" class="control-label-custom">Check-in</label>
+        <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
+      </div>
 
-    </div>
-  </div>
+      <div class="col">
+        <label for="data" class="control-label-custom">Check-out</label>
+        <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
+      </div>
+
+      <div class="col">
+        <label for="data" class="control-label-custom">Pessoas</label>
+        <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
+      </div>
+
+      <div class="col" id="search_icon">
+        <i class="btn fa fa-search" aria-hidden="true"></i>
+      </div>
+
+    </div>  
+  </div>                
   
+  {!! Form::close() !!}
+  
+</div>
+
 </div>
 
 <br>
@@ -274,342 +292,342 @@
       </div>
     </div>
     
-
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+    
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Samantha Sarah</h6>
+                  <p class="designation">Founder &amp; CEO</p>
+                </div>
               </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Samantha Sarah</h6>
-                <p class="designation">Founder &amp; CEO</p>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Nazrul Islam</h6>
+                  <p class="designation">UI Designer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Riyadh Khan</h6>
+                  <p class="designation">Developer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Niloy Islam</h6>
+                  <p class="designation">Marketing Manager</p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Samantha Sarah</h6>
+                  <p class="designation">Founder &amp; CEO</p>
+                </div>
               </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Nazrul Islam</h6>
-                <p class="designation">UI Designer</p>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Nazrul Islam</h6>
+                  <p class="designation">UI Designer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Riyadh Khan</h6>
+                  <p class="designation">Developer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Niloy Islam</h6>
+                  <p class="designation">Marketing Manager</p>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Riyadh Khan</h6>
-                <p class="designation">Developer</p>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Samantha Sarah</h6>
+                  <p class="designation">Founder &amp; CEO</p>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Nazrul Islam</h6>
+                  <p class="designation">UI Designer</p>
+                </div>
               </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Niloy Islam</h6>
-                <p class="designation">Marketing Manager</p>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Riyadh Khan</h6>
+                  <p class="designation">Developer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Single Advisor-->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <!-- Team Thumb-->
+                <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
+                  <!-- Social Info-->
+                  <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                <!-- Team Details-->
+                <div class="single_advisor_details_info">
+                  <h6>Niloy Islam</h6>
+                  <p class="designation">Marketing Manager</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="row">
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Samantha Sarah</h6>
-                <p class="designation">Founder &amp; CEO</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Nazrul Islam</h6>
-                <p class="designation">UI Designer</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Riyadh Khan</h6>
-                <p class="designation">Developer</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Niloy Islam</h6>
-                <p class="designation">Marketing Manager</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Samantha Sarah</h6>
-                <p class="designation">Founder &amp; CEO</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Nazrul Islam</h6>
-                <p class="designation">UI Designer</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Riyadh Khan</h6>
-                <p class="designation">Developer</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Niloy Islam</h6>
-                <p class="designation">Marketing Manager</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-</section>
-
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
-  <section
-  class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-  >
-  <!-- Left -->
-  <div class="me-5 d-none d-lg-block">
-    <span>Conecte-se conosco nas redes sociais:</span>
-  </div>
-  <!-- Left -->
+    
+  </section>
   
-  <!-- Right -->
-  <div>
-    <a href="" class="me-4 text-reset">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="" class="me-4 text-reset">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="" class="me-4 text-reset">
-      <i class="fab fa-google"></i>
-    </a>
-    <a href="" class="me-4 text-reset">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="" class="me-4 text-reset">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="" class="me-4 text-reset">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
-  <!-- Right -->
-</section>
-<!-- Section: Social media -->
-
-<!-- Section: Links  -->
-<section class="">
-  <div class="container text-center text-md-start mt-5">
-    <!-- Grid row -->
-    <div class="row mt-3">
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-        <!-- Content -->
-        <h6 class="text-uppercase fw-bold mb-4">
-          <i class="fas fa-map-marked me-3"></i> Pez Turismo
-        </h6>
-        <p>
-          Aqui colocamos algum texto falando um pouco sobre os serviços prestados.
-        </p>
-      </div>
-      <!-- Grid column -->
-      
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-        <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
-          Roteiros
-        </h6>
-        <p>
-          <a href="#!" class="text-reset">Região Norte</a>
-        </p>
-        <p>
-          <a href="#!" class="text-reset">Região Sul</a>
-        </p>
-        <p>
-          <a href="#!" class="text-reset">Região Leste</a>
-        </p>
-        <p>
-          <a href="#!" class="text-reset">Região Oeste</a>
-        </p>
-      </div>
-      <!-- Grid column -->
-      
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-        <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
-          Guias
-        </h6>
-        <p>
-          <a href="#!" class="text-reset">Quem são os guias</a>
-        </p>
-        <p>
-          <a href="#!" class="text-reset">Seja um guia Pez</a>
-        </p>
-        <p>
-          <a href="#!" class="text-reset">Seja um anfitrião</a>
-        </p>
-        <p>
-          <a href="#!" class="text-reset">Help</a>
-        </p>
-      </div>
-      
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-        <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
-          Contato
-        </h6>
-        <p><i class="fas fa-home me-3"></i> São Paulo, SP 03908-000, SP</p>
-        <p>
-          <i class="fas fa-envelope me-3"></i>
-          info@pez.com.br
-        </p>
-        <p><i class="fas fa-phone me-3"></i> + 55 11 94598-9898</p>
-        <p><i class="fas fa-print me-3"></i> + 55 11 94598-9898</p>
-      </div>
-      <!-- Grid column -->
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Conecte-se conosco nas redes sociais:</span>
     </div>
-    <!-- Grid row -->
+    <!-- Left -->
+    
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+  
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-map-marked me-3"></i> Pez Turismo
+          </h6>
+          <p>
+            Aqui colocamos algum texto falando um pouco sobre os serviços prestados.
+          </p>
+        </div>
+        <!-- Grid column -->
+        
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Roteiros
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Região Norte</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Região Sul</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Região Leste</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Região Oeste</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Guias
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Quem são os guias</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Seja um guia Pez</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Seja um anfitrião</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contato
+          </h6>
+          <p><i class="fas fa-home me-3"></i> São Paulo, SP 03908-000, SP</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@pez.com.br
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 55 11 94598-9898</p>
+          <p><i class="fas fa-print me-3"></i> + 55 11 94598-9898</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">pez.com.br</a>
   </div>
-</section>
-<!-- Section: Links  -->
-
-<!-- Copyright -->
-<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-  © 2021 Copyright:
-  <a class="text-reset fw-bold" href="https://mdbootstrap.com/">pez.com.br</a>
-</div>
-<!-- Copyright -->
+  <!-- Copyright -->
 </footer>
 <!-- Footer -->
 

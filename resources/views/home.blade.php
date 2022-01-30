@@ -86,7 +86,7 @@
     <div class="form-check form-check-inline"> 
       
       Check in: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
-      <p>Check out: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/></p>
+      Check out: <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
       <button class="btn btn-primary btn-block"><i class="fas fa-search"></i></button>
     </div>
   </div>
