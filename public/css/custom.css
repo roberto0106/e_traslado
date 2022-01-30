@@ -14,22 +14,20 @@
     color: white;
 }
 
-#search_menu{
 
-}
-
-      
 #search_icon{
     font-size: 40px;
+    width: min-content;
+    flex-basis: 2;
 }
 
 
 .busca{
     background-color: white;
     height: 80px;
-    border-radius: 60px;
+    border-radius: 50px;
     width: 60%; 
-    margin-top: 5%;
+    margin-top: 5%;  
 }
 
 .galery{

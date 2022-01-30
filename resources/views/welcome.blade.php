@@ -108,7 +108,7 @@
         <input type="text" id="calendario" name="data" autocomplete="off" class="form-control"/>
       </div>
 
-      <div class="col" id="search_icon">
+      <div class="col-1" id="search_icon">
         <i class="btn fa fa-search" aria-hidden="true"></i>
       </div>
 
